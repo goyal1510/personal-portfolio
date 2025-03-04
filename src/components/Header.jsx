@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import logo from "../resources/J_logo.png";
+
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 
@@ -12,7 +14,7 @@ const Header = ({ toggleTheme, theme }) => {
   return (
     <header id="header">
       <nav>
-        <img src="./resources/J_logo.png" className="logo" alt="logo" />
+        <img src={logo} className="logo" alt="logo" />
         <input
           type="checkbox"
           id="theme-switch"

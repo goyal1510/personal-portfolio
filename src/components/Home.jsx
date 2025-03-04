@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import jayantImage from "../resources/Jayant.jpg";
+import jayantResume from "../resources/Jayant_Resume.pdf"
 const Home = ({ theme }) => {
     return (
       <div id="home" className={theme}>
@@ -14,10 +16,10 @@ const Home = ({ theme }) => {
                 <a href="https://twitter.com/goyal151002" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-twitter"></i></a>
                 <a href="https://www.instagram.com/goyal_1510/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i></a>
               </div>
-              <a href="./resources/Jayant_1.pdf" download className="down-btn">Download CV</a>
+              <a href={jayantResume} download className="down-btn">Download CV</a>
             </div>
             <div className="image">
-              <img src="./resources/Jayant.jpg" alt="Jayant" />
+              <img src={jayantImage} alt="Jayant" />
             </div>
           </div>
         </div>

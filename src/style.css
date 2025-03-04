@@ -47,6 +47,7 @@ button:hover,
 .form-btn:hover {
   background: #ff004f;
   transform: translateY(-5px);
+  border: 1px solid #ff004f;;
 }
 
 button::before,
@@ -349,6 +350,49 @@ nav ul li a:hover::after {
   box-shadow: 0 0 30px #ff004f;
   transition: transform 0.5s ease;
 }
+.icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.icons a i {
+  font-size: 20px;
+  color: white;
+}
+
+.icons a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.icons a:nth-child(1) {
+  background: #24292e; /* GitHub icon background */
+}
+
+.icons a:nth-child(1):hover {
+  background: #333;
+}
+
+.icons a:nth-child(2) {
+  background: #007bff; /* Live preview icon background */
+}
+
+.icons a:nth-child(2):hover {
+  background: #0056b3;
+}
+
 
 @keyframes pulse {
   0% {
@@ -548,16 +592,6 @@ nav ul li a:hover::after {
 .about-col-1 img {
   width: 100%;
   border-radius: 25px;
-  animation: rotate 5s ease-in-out infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
 }
 
 .about-col-2 {
@@ -597,6 +631,12 @@ nav ul li a:hover::after {
   font-weight: 300;
   border-radius: 10px;
   transition: background 0.5s, transform 0.5s;
+  
+  /* Ensure all items inside use flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure equal height for all cards */
 }
 
 .certificates-list div i {
@@ -610,16 +650,21 @@ nav ul li a:hover::after {
   margin-bottom: 15px;
 }
 
+.certificates-list div p {
+  flex-grow: 1; /* Pushes button to the bottom */
+}
+
 .certificates-list div a {
   text-align: center;
-  padding: 5px 10px;
-  border: 1px white solid;
+  padding: 10px 15px;
+  border: 1px solid white;
   text-decoration: none;
   color: #fff;
   font-size: 15px;
-  margin: 20px 40%;
   display: inline-block;
   border-radius: 5px;
+  margin-top: auto; /* Ensures button stays at the bottom */
+  align-self: center; /* Centers button horizontally */
 }
 
 .certificates-list div:hover {
